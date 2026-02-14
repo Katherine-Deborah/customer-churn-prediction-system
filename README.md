@@ -61,8 +61,6 @@ pip install -r requirements.txt
 
 ## How to Run
 
-Run each step sequentially from the `churnsight/` directory:
-
 ```bash
 cd churnsight
 
@@ -93,22 +91,19 @@ python src/explain.py
 | XGBoost             | `scale_pos_weight`     | GridSearchCV (lr, depth)    |
 | MLP Neural Network  | early stopping         | GridSearchCV (layers, alpha)|
 
-All models are tuned via 5-fold cross-validation optimizing **F1-score**.
 
 ---
 
 ## Metrics
 
-After running `evaluate.py`, check `reports/metrics.json` for results like:
 
 | Model               | Accuracy | Precision | Recall | F1     | ROC-AUC |
 |---------------------|----------|-----------|--------|--------|---------|
-| LogisticRegression  | —        | —         | —      | —      | —       |
-| RandomForest        | —        | —         | —      | —      | —       |
-| XGBoost             | —        | —         | —      | —      | —       |
-| MLP                 | —        | —         | —      | —      | —       |
+| LogisticRegression  | 0.8774   | 0.925     | 0.8416 | 0.8814 | 0.9544  |
+| RandomForest        | 0.9309   | 0.9197    | 0.9558 | 0.9374 | 0.9753  |
+| XGBoost             | 0.9343   | 0.9303    | 0.9498 | 0.9399 | 0.9761  |
+| MLP                 | 0.9157   | 0.9278    | 0.9153 | 0.9215 | 0.973   |
 
-*(Values populated after running the pipeline)*
 
 ---
 
