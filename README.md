@@ -28,6 +28,7 @@ churnsight/
 │   ├── figures/                   ← SHAP plots (PNG)
 │   └── metrics.json               ← evaluation results
 │
+├── app.py                         ← Streamlit web UI
 ├── requirements.txt
 └── README.md
 ```
@@ -114,6 +115,26 @@ After `explain.py` runs, find these in `reports/figures/`:
 - **shap_summary_bar.png** — Top features by mean |SHAP value|
 - **shap_summary_dot.png** — Beeswarm plot showing feature value effects
 - **shap_local_0.png** — Waterfall for individual customer prediction
+
+---
+
+## Web UI (Streamlit)
+
+ChurnSight includes an interactive web app for business users.
+
+```bash
+streamlit run app.py
+```
+
+**Features:**
+- Upload any customer CSV and get instant churn predictions
+- Choose between all 4 trained models from the sidebar
+- Adjust the churn probability threshold with a slider
+- View color-coded results table with risk levels (Low / Medium / High)
+- Download predictions as CSV
+- Explore SHAP global feature importance
+- Select any individual customer to see a waterfall explanation of their prediction
+- Pre-computed SHAP plots displayed on the landing page
 
 ---
 
